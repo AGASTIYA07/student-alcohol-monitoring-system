@@ -4,8 +4,11 @@ import os
 import random
 import serial
 from flask import Flask, render_template, request, jsonify
+from werkzeug.middleware.proxy_fix import ProxyFix
 
 app = Flask(__name__)
+# Tell Flask it is behind a proxy so url_for generates https:// correctly
+app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
 
 # If running on Render with a mounted disk at /data, save there. Otherwise save locally.
 DB_FILE = '/data/students.db' if os.path.exists('/data') else 'students.db'
