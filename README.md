@@ -57,10 +57,10 @@ Visit `http://127.0.0.1:5000` in your web browser.
 ---
 
 ## 👥 Contributors
-- **[Your Name]** - *Lead Developer* - [@YourGitHubUser](https://github.com/YourGitHubUser)
-- **[Contributor 2 Name]** - *Role/Contribution* - [@ContributorGitHub](https://github.com/ContributorGitHub)
-- **[Contributor 3 Name]** - *Role/Contribution* - [@ContributorGitHub](https://github.com/ContributorGitHub)
-- **[Contributor 4 Name]** - *Role/Contribution* - [@ContributorGitHub](https://github.com/ContributorGitHub)
+- **[Agastiya JL]**  - https://github.com/AGASTIYA07
+- **[Iniya Srilekha B]** -  https://github.com/Iniya-008
+- **[Sruthica Sathishkumar]** - https://github.com/sruthicasathish-stack
+- **[Rubini SK]** - https://github.com/rubinisk
 
 ---
 *Developed as an academic prototype for behavior-aware student wellbeing and monitoring.*
