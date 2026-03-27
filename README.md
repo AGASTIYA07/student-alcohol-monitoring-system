@@ -55,4 +55,11 @@ python3 app.py
 Visit `http://127.0.0.1:5000` in your web browser.
 
 ---
+
+## 👥 Contributors
+- **[Your Name]** - *Lead Developer* - [@YourGitHubUser](https://github.com/YourGitHubUser)
+- **[Contributor 2 Name]** - *Role/Contribution* - [@ContributorGitHub](https://github.com/ContributorGitHub)
+- **[Contributor 3 Name]** - *Role/Contribution* - [@ContributorGitHub](https://github.com/ContributorGitHub)
+
+---
 *Developed as an academic prototype for behavior-aware student wellbeing and monitoring.*
