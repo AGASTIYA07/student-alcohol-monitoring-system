@@ -1,4 +1,5 @@
 # 🛡️ Intelligent Student Alcohol Monitoring, Risk Prediction, and Recovery System
+# Team Name : Syntax Squads
 
 Traditional alcohol detection systems provide only one-time outputs and fail to track behavioral patterns or support long-term recovery. 
 
@@ -57,10 +58,10 @@ Visit `http://127.0.0.1:5000` in your web browser.
 ---
 
 ## 👥 Contributors
-- **[Agastiya JL]**  - https://github.com/AGASTIYA07
-- **[Iniya Srilekha B]** -  https://github.com/Iniya-008
-- **[Sruthica Sathishkumar]** - https://github.com/sruthicasathish-stack
-- **[Rubini SK]** - https://github.com/rubinisk
+- **Agastiya JL**  - https://github.com/AGASTIYA07
+- **Iniya Srilekha B** -  https://github.com/Iniya-008
+- **Sruthica Sathishkumar** - https://github.com/sruthicasathish-stack
+- **Rubini SK** - https://github.com/rubinisk
 
 ---
 *Developed as an academic prototype for behavior-aware student wellbeing and monitoring.*
