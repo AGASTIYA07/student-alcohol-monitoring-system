@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Alcohol Monitoring & Recovery</title>
+    <!-- Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Student Wellbeing & Recovery Portal</h1>
+            <p>Empowering healthier lifestyles through intelligent monitoring.</p>
+            <div class="nav-links">
+                <a href="/faculty" class="btn-link">Switch to Faculty Dashboard</a>
+            </div>
+        </header>
+
+        <main class="grid-container">
+            <!-- Left Side: Input Form -->
+            <section class="card input-section glass">
+                <h2>Record New Entry</h2>
+                <form id="submission-form">
+                    <div class="input-group">
+                        <label for="student_id">Student ID</label>
+                        <input type="text" id="student_id" placeholder="e.g., S001" required>
+                    </div>
+                    
+                    <div class="input-group input-group-row">
+                        <div style="flex: 1;">
+                            <label for="alcohol_level">Alcohol Level</label>
+                            <input type="number" id="alcohol_level" placeholder="Waiting for sensor..." required readonly>
+                        </div>
+                        <button type="button" class="btn-secondary" id="read-sensor-btn" style="margin-top: 1.5rem; margin-left: 1rem;">
+                            📡 Read Sensor
+                        </button>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary" id="submit-btn">Submit Reading</button>
+                </form>
+            </section>
+
+            <!-- Right Side: Analysis Dashboard -->
+            <section class="card results-section glass" id="results-panel" style="display: none;">
+                <h2>Current Assessment: <span id="classification-badge" class="badge">--</span></h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <h3>Risk Score</h3>
+                        <p class="score-value" id="risk-score">--</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Clean Streak</h3>
+                        <p class="streak-value" id="clean-streak">-- days</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Escalation Status</h3>
+                        <p class="escalation-value" id="escalation-status">--</p>
+                    </div>
+                </div>
+                
+                <div class="info-panel">
+                    <h3>AI Suggestion</h3>
+                    <p id="ai-suggestion">--</p>
+                </div>
+                
+                <div class="info-panel prediction">
+                    <h3>Behavior Prediction</h3>
+                    <p id="behavior-prediction">--</p>
+                </div>
+                
+                <div id="avoidance-warning" class="warning-alert" style="display: none;">
+                    ⚠️ Avoidance detected! No recent readings submitted.
+                </div>
+            </section>
+        </main>
+        
+        <section class="card history-section glass" id="history-panel" style="display: none;">
+            <h2>Behavioral History</h2>
+            <div class="chart-container">
+                <canvas id="history-chart"></canvas>
+            </div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

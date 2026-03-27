@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Dashboard - Alcohol Monitoring</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="faculty-body">
+    <div class="app-container">
+        <header class="app-header faculty-header">
+            <h1>Faculty Monitoring Dashboard</h1>
+            <p>Overview of student behavioral risk and recovery progress.</p>
+            <div class="nav-links">
+                <a href="/" class="btn-link">Back to Student Portal</a>
+            </div>
+        </header>
+
+        <section class="card glass table-section">
+            <div class="table-actions">
+                <button class="btn-secondary" onclick="fetchFacultyData()">Refresh Data</button>
+            </div>
+            
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Classification</th>
+                        <th>Risk Score</th>
+                        <th>Clean Streak</th>
+                        <th>Avoidance</th>
+                        <th>Escalation Level</th>
+                    </tr>
+                </thead>
+                <tbody id="student-table-body">
+                    <!-- Populated via JS -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        // Auto-fetch data for faculty page
+        document.addEventListener('DOMContentLoaded', fetchFacultyData);
+    </script>
+</body>
+</html>

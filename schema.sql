@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS records;
+
+CREATE TABLE records (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    student_id TEXT NOT NULL,
+    alcohol_level INTEGER NOT NULL,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+);
